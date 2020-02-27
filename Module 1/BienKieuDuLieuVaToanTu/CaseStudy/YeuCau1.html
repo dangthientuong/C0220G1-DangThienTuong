@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Yeu Cau 1</title>
+</head>
+<body>
+<script>
+    let ten = prompt('Họ và Tên')
+    let cmnd = prompt('Số CMND');
+    let sinhnhat = prompt('Ngày/Tháng/Năm');
+    let email = prompt('Email');
+    let diachi = prompt('Địa Chỉ');
+    let cus = prompt('Customer');
+    let discount = prompt('Giảm Giá');
+    let soluong = prompt('Số lượng đi kèm');
+    let songay = prompt('Số ngày thuê');
+    let loaidichvu = prompt('Loại dịch vụ');
+    let loaiphong = prompt('Loại phòng thuê');
+    let giadichvu = 100;
+    if (loaidichvu === "Villa")
+    {
+        giadichvu = 500;
+    }
+    Else
+    if (loaidichvu === "House")
+    {
+        giadichvu = 300;
+    }
+    Else
+    if (loaidichvu === "Room")
+    {
+        giadichvu = 100;
+    }
+    let sotienphaitra = giadichvu * parseInt(songay) * (1-parseInt(discount)/100);
+    alert(sotienphaitra);
+   alert('Họ và tên: '+ten+'\n'+
+        'Số CMND: '+cmnd+'\n'+
+        'Ngày/Tháng/Năm: '+sinhnhat+'\n'+
+        'Email: '+email+'\n'+
+        'Địa Chỉ: '+diachi+'\n'+
+        'Customer: '+cus+'\n'+
+        'Giảm Giá: '+discount+'\n'+
+        'Số lượng đi kèm: '+soluong+'\n'+
+        'Số ngày thuê: '+songay+'\n'+
+        'Loại dịch vụ: '+loaidichvu+'\n'+
+        'Loại phòng thuê: '+loaiphong+'\n'+
+        'Số tiền phải trả: ' +sotienphaitra);
+
+</script>
+</body>
+</html>
