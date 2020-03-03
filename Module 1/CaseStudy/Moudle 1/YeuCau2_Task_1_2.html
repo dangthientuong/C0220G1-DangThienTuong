@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Yeu Cau 2 Task 1 -2</title>
+</head>
+<body>
+<script>
+    let ten = 'Đặng Thiên Tường';
+    let cmnd = '201585364';
+    let sinhnhat = '17/11/1989';
+    let email = 'tuongdesign@gmail.com';
+    let diachi = 'Đà Nẵng';
+    let cus = 'Diamond';
+    let discount = 10;
+    let soluong = 20;
+    let songay = 7;
+    let loaidichvu = 'Villa';
+    let loaiphong = 'VIP';
+    let giadichvu = 100;
+    if (loaidichvu === "Villa")
+    {
+        giadichvu = 500;
+    }
+    else
+    if (loaidichvu === "House")
+    {
+        giadichvu = 300;
+    }
+    else
+    if (loaidichvu === "Room")
+    {
+        giadichvu = 100;
+    }
+    let sotienphaitra = giadichvu * parseInt(songay) * (1-parseInt(discount)/100);
+    let choose = parseInt(prompt("1. Hiên thị thông tin khách hàng. "+"\n"+
+    "2. Chỉnh sửa thông tin khách hàng. "+"\n"+
+    "3. Hiển thị giá sau khi giảm giá"));
+    switch (choose) {
+        case "1":
+            alert("Tên: " + ten  + "\n" +
+            "CMND:" + cmnd + "\n" +
+            "Ngày sinh: " + sinhnhat + "\n" +
+            "Email :" + email + "\n" +
+            "Địa chỉ: " + diachi + "\n" +
+            "Loại Khách Hàng :" + cus + "\n" +
+            "Giảm giá :" + discount + "\n" +
+            "Số lượng đi kèm :" + soluong + "\n" +
+            "Số ngày thuê :" + songay + "\n" +
+            "Loại dịch vụ :" + loaidichvu + "\n" +
+            "Loại phòng thuê :" + loaiphong);
+            break;
+         case 2:
+             let chooseEdit = parseInt(prompt("1. Tên: " + ten + "\n"+
+                 "2. CMND:" + cmnd + "\n" +
+                 "3. Ngày sinh: " + sinhnhat + "\n" +
+                 "4. Email :" + email + "\n" +
+                 "5. Địa chỉ: " + diachi + "\n" +
+                 "6. Loại Khách Hàng :" + cus + "\n" +
+                 "7. Giảm giá :" + discount + "\n" +
+                 "8. Số lượng đi kèm :" + soluong + "\n" +
+                 "9. Số ngày thuê :" + songay + "\n" +
+                 "10. Loại dịch vụ :" + loaidichvu + "\n" +
+                 "11. Loại phòng thuê :" + loaiphong));
+             switch (chooseEdit) {
+                 case 1:
+                     ten = prompt("Chỉnh sửa tên");
+                     break;
+                 default :
+                     alert("Failed");
+                     break;
+             }
+             alert("Tên: " + ten  + "\n" +
+                 "CMND:" + cmnd + "\n" +
+                 "Ngày sinh: " + sinhnhat + "\n" +
+                 "Email :" + email + "\n" +
+                 "Địa chỉ: " + diachi + "\n" +
+                 "Loại Khách Hàng :" + cus + "\n" +
+                 "Giảm giá :" + discount + "\n" +
+                 "Số lượng đi kèm :" + soluong + "\n" +
+                 "Số ngày thuê :" + songay + "\n" +
+                 "Loại dịch vụ :" + loaidichvu + "\n" +
+                 "Loại phòng thuê :" + loaiphong);
+             break;
+
+    }
+
+</script>
+</body>
+</html>
