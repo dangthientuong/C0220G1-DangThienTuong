@@ -83,6 +83,47 @@
                  "Loại phòng thuê :" + loaiphong);
              break;
 
+        case 3: {
+            let giamtheokhuvuc = 0;
+            if (diachi === "Đà Nẵng") {
+                giamtheokhuvuc += 20;
+            }
+            else if (diachi === "Huế") {
+                giamtheokhuvuc += 10;
+            }
+            else if (diachi === "Quảng Nam") {
+                giamtheokhuvuc +=5;
+            }
+            if (songay > 7) {
+                giamtheokhuvuc += 30;
+            }
+            else if (songay > 5) {
+                giamtheokhuvuc += 20;
+            }
+            else if (songay > 2) {
+                giamtheokhuvuc += 10;
+            }
+            if (cus === "Diamond") {
+                giamtheokhuvuc += 15;
+            }
+            else if (cus === "Platium") {
+                giamtheokhuvuc += 10;
+            }
+            else if (cus === "Gold") {
+                giamtheokhuvuc += 5 ;
+            }
+            else if (cus === "Silver") {
+                giamtheokhuvuc += 2;
+            }
+            else if (cus === "Member") {
+                giamtheokhuvuc += 0;
+            }
+            alert("Tổng số tiền phải trả :" + (giadichvu * songay - giamtheokhuvuc));
+            break;
+
+        }
+
+
     }
 
 </script>
