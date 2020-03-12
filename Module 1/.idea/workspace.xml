@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8a6b0406-117c-4354-9038-689236dcaeab" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Mang/BaiTap/BaiTapLuyenMang_2/Bai_5.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaseStudy/Moudle 1/YeuCau3_Task_1.html" beforeDir="false" afterPath="$PROJECT_DIR$/CaseStudy/Moudle 1/YeuCau3_Task_1.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +69,7 @@
       <workItem from="1583827446477" duration="1409000" />
       <workItem from="1583830025413" duration="487000" />
       <workItem from="1583830824925" duration="1256000" />
-      <workItem from="1583947121486" duration="30896000" />
+      <workItem from="1583947121486" duration="34829000" />
     </task>
     <task id="LOCAL-00001" summary="abc">
       <created>1583133179332</created>
@@ -302,7 +302,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584001554981</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="abc">
+      <created>1584005043564</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1584005043564</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -321,10 +328,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1583399033124" />
-    <state x="306" y="0" key="CommitChangelistDialog2" timestamp="1584001554083">
+    <state x="306" y="0" key="CommitChangelistDialog2" timestamp="1584005042504">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="306" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1584001554083" />
+    <state x="306" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1584005042504" />
     <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1582534532768">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -333,10 +340,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1583947172551" />
-    <state x="275" y="92" key="Vcs.Push.Dialog.v2" timestamp="1584001556301">
+    <state x="275" y="92" key="Vcs.Push.Dialog.v2" timestamp="1584005044991">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="92" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1584001556301" />
+    <state x="275" y="92" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1584005044991" />
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1583379414120">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
