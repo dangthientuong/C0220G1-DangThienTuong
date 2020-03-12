@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Yêu cầu  3</title>
+</head>
+<body>
+<script>
+    let kiemtra = 0;
+    let tentam = '';
+    let ten = prompt('Họ và Tên');
+    ten = ten.trim().toLowerCase();
+    for (let i = 0 ; i < ten.length ; i++) {
+        if (ten.charAt(i) === ' ' && ten.charAt(i + 1) === ' ') {
+            continue;
+        }
+        if (i === 0 || ten.charAt(i - 1) === ' ') {
+            tentam += ten.charAt(i).toUpperCase();
+            continue;
+        }
+        tentam += ten.charAt(i);
+    }
+    alert(tentam);
+    ten = tentam;
+    do {
+        let cmnd = prompt('Số CMND');
+        if (!isNaN(cmnd)) {
+            cmnd = Number.parseFloat(cmnd);
+        }
+        if (!Number.isInteger(cmnd)) {
+            alert('Vui lòng nhập lại đúng số CMND');
+            continue;
+        }
+        if (cmnd < 100000000 || cmnd > 999999999) {
+            alert('Vui lòng nhập lại đúng số CMND');
+            continue;
+        }
+        kiemtra = true;
+    }
+    while (!kiemtra)
+    kiemtra = false;
+    do {
+        let sinhnhat = prompt('Ngày/Tháng/Năm');
+        if (sinhnhat.charAt(2) === '/' && sinhnhat.charAt(5) === '/') {
+            let day = sinhnhat.substring(0,2);
+            let month = sinhnhat.substring(3,5);
+            let year = sinhnhat.substring(6,10);
+            if (!isNaN(day) && !isNaN(month) && !isNaN(year)) {
+                day = Number.parseFloat(day);
+                month = Number.parseFloat(month);
+                year = Number.parseFloat(year);
+                if (Number.isInteger(day) && Number.isInteger(month) && Number.isInteger(year)) {
+                    if (day < 32 && month < 13 && year > 1950) {
+                        kiemtra = true;
+                    }
+                }
+            }
+        }
+        if (!kiemtra) {
+            alert('Ngày sinh nhập không đúng định dạng')
+        }
+    }
+    while (!kiemtra)
+    kiemtra = false;
+    do {
+        let kytu = 0;
+        let daucham = 0;
+        let email = prompt('Email');
+        for (let i = 0 ; i < email.length ; i++) {
+            if (email.charAt(i) === '@') {
+                kytu++;
+                for (let j = i + 1 ; j < email.length ; j++) {
+                    if (email.charAt(i) === '.') {
+                        daucham++;
+                    }
+                }
+            }
+        }
+        if (kytu != 1 || daucham < 1) {
+            alert('Email bạn nhập không đúng');
+        }
+        else {
+            kiemtra = true;
+        }
+    }
+    while (!kiemtra)
+    kiemtra = false;
+    let diachi = 'Đà Nẵng';
+    let cus = 'Diamond';
+    let discount = 10;
+    do {
+        soluong = 20;
+        if (!isNaN(soluong)) {
+            soluong = Number.parseFloat(soluong);
+            if (Number.parseFloat(soluong) && soluong > 0) {
+                kiemtra = true;
+            }
+        }
+        if (!kiemtra) {
+            alert('Vui lòng nhập đúng số lượng khách');
+        }
+    }
+    while (!kiemtra)
+    kiemtra = false;
+    do {
+        let songay = 7;
+        if (!isNaN(songay)) {
+            songay = Number.parseFloat(songay);
+            if (Number.isInteger(songay) && songay > 0) {
+                kiemtra = true;
+            }
+        }
+        if (!kiemtra) {
+            alert('Vui lòng nhập đúng số ngày nghỉ')
+        }
+    }
+    while (!kiemtra)
+    kiemtra = false;
+    let loaidichvu = 'Villa';
+    let loaiphong = 'VIP';
+    let giadichvu = 100;
+    if (loaidichvu === "Villa")
+    {
+        giadichvu = 500;
+    }
+    else
+    if (loaidichvu === "House")
+    {
+        giadichvu = 300;
+    }
+    else
+    if (loaidichvu === "Room")
+    {
+        giadichvu = 100;
+    }
+    let sotienphaitra = giadichvu * parseInt(songay) * (1-parseInt(discount)/100);
+    let choose = parseInt(prompt("1. Hiên thị thông tin khách hàng. "+"\n"+
+        "2. Chỉnh sửa thông tin khách hàng. "+"\n"+
+        "3. Hiển thị giá sau khi giảm giá"));
+    switch (choose) {
+        case "1":
+            alert("Tên: " + ten  + "\n" +
+                "CMND:" + cmnd + "\n" +
+                "Ngày sinh: " + sinhnhat + "\n" +
+                "Email :" + email + "\n" +
+                "Địa chỉ: " + diachi + "\n" +
+                "Loại Khách Hàng :" + cus + "\n" +
+                "Giảm giá :" + discount + "\n" +
+                "Số lượng đi kèm :" + soluong + "\n" +
+                "Số ngày thuê :" + songay + "\n" +
+                "Loại dịch vụ :" + loaidichvu + "\n" +
+                "Loại phòng thuê :" + loaiphong);
+            break;
+        case 2:
+            let chooseEdit = parseInt(prompt("1. Tên: " + ten + "\n"+
+                "2. CMND:" + cmnd + "\n" +
+                "3. Ngày sinh: " + sinhnhat + "\n" +
+                "4. Email :" + email + "\n" +
+                "5. Địa chỉ: " + diachi + "\n" +
+                "6. Loại Khách Hàng :" + cus + "\n" +
+                "7. Giảm giá :" + discount + "\n" +
+                "8. Số lượng đi kèm :" + soluong + "\n" +
+                "9. Số ngày thuê :" + songay + "\n" +
+                "10. Loại dịch vụ :" + loaidichvu + "\n" +
+                "11. Loại phòng thuê :" + loaiphong));
+            switch (chooseEdit) {
+                case 1:
+                    ten = prompt("Chỉnh sửa tên");
+                    break;
+                default :
+                    alert("Failed");
+                    break;
+            }
+            alert("Tên: " + ten  + "\n" +
+                "CMND:" + cmnd + "\n" +
+                "Ngày sinh: " + sinhnhat + "\n" +
+                "Email :" + email + "\n" +
+                "Địa chỉ: " + diachi + "\n" +
+                "Loại Khách Hàng :" + cus + "\n" +
+                "Giảm giá :" + discount + "\n" +
+                "Số lượng đi kèm :" + soluong + "\n" +
+                "Số ngày thuê :" + songay + "\n" +
+                "Loại dịch vụ :" + loaidichvu + "\n" +
+                "Loại phòng thuê :" + loaiphong);
+            break;
+
+        case 3: {
+            let giamtheokhuvuc = 0;
+            if (diachi === "Đà Nẵng") {
+                giamtheokhuvuc += 20;
+            }
+            else if (diachi === "Huế") {
+                giamtheokhuvuc += 10;
+            }
+            else if (diachi === "Quảng Nam") {
+                giamtheokhuvuc +=5;
+            }
+            if (songay > 7) {
+                giamtheokhuvuc += 30;
+            }
+            else if (songay > 5) {
+                giamtheokhuvuc += 20;
+            }
+            else if (songay > 2) {
+                giamtheokhuvuc += 10;
+            }
+            if (cus === "Diamond") {
+                giamtheokhuvuc += 15;
+            }
+            else if (cus === "Platium") {
+                giamtheokhuvuc += 10;
+            }
+            else if (cus === "Gold") {
+                giamtheokhuvuc += 5 ;
+            }
+            else if (cus === "Silver") {
+                giamtheokhuvuc += 2;
+            }
+            else if (cus === "Member") {
+                giamtheokhuvuc += 0;
+            }
+            alert("Tổng số tiền phải trả :" + (giadichvu * songay - giamtheokhuvuc));
+            break;
+
+        }
+
+
+    }
+
+</script>
+</body>
+</html>
