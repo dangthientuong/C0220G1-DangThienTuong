@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi nhiệt độ</title>
+</head>
+<body>
+<label><h1>Temperature Conveter</h1></label><br>
+<label>Fahrenheit</label>
+<input id="inputFahrenheit" type="number" placeholder="Fahrenheit"
+oninput="temperatureConverter(this.value)"
+onchange="temperatureConverter(this.value)">
+<p>Celsius: <span id="outputCelsius"></span></p>
+<script>
+    function temperatureConverter(tinh) {
+        tinh = parseFloat(tinh);
+        document.getElementById('outputCelsius').innerHTML = (tinh - 32) / 1.8;
+
+    }
+</script>
+</body>
+</html>
