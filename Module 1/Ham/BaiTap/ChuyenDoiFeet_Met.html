@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi giữa feet và meters</title>
+</head>
+<body>
+<label>Nhập số cần chuyển : <input id="nhapso"></label>
+<label>From: </label><select id="from">
+    <option value="Meters">Meters</option>
+    <option value="Feet">Feet</option>
+</select>
+<label>To: </label><select id="to">
+    <option value="Meters">Meters</option>
+    <option value="Feet">Feet</option>
+</select>
+<input type="text" id="total">
+<button onclick="ketqua()">Kết Quả</button>
+<script>
+    function ketqua() {
+        let nhapso = document.getElementById('nhapso');
+        let from = document.getElementById('from').value;
+        let to = document.getElementById('to').value;
+        let ketqua = document.getElementById('total');
+        if (from === 'Meters' && to === 'Feet') {
+            ketqua.value = nhapso.value * 0.305;
+        }
+        if (from === 'Feet' && to === 'Meters') {
+            ketqua.value = nhapso.value * 3.279;
+        }
+
+    }
+</script>
+</body>
+</html>

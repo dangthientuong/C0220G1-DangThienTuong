@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra số nguyên tố</title>
+</head>
+<body>
+<script>
+    for (let i = 2 ; i < 1000 ; i++) {
+        if (isPrime(i)) {
+            document.write(i);
+        }
+        document.write('\n');
+    }
+    function isPrime(number) {
+        for (let j = 2 ; j < number ; j++) {
+            if (number % j == 0) {
+                return false;
+            }
+        }
+        return true;
+
+    }
+
+</script>
+</body>
+</html>
