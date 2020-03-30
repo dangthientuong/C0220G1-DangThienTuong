@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Yêu cầu 5 task 2</title>
+</head>
+<body>
+<script>
+    let arrListCustomer = [];
+
+    function displayMainMenu() {
+        let choose = parseInt(prompt("1. Add new Customers" + "\n" +
+            "2.Display Infomation Customer" + "\n" +
+            "3.Edit Infomation Customer" + "\n" +
+            "4.Delete Customer" + "\n" +
+            "5. Exit Customer"));
+        switch (choose) {
+            case 1: {
+                addNewCustomer();
+                break;
+            }
+            case 2: {
+                displayCustomer();
+                break;
+            }
+            case 3: {
+                break;
+            }
+            case 4: {
+                break;
+            }
+            case 5: {
+                break;
+            }
+            default: {
+                alert("Failed");
+            }
+        }
+    }
+
+    function displayCustomer() {
+        let temp = "";
+        for (let i = 0; i < arrListCustomer.length; i++) {
+            temp += i + ". Name: " + arrListCustomer[i][0] + "\n";
+        }
+        let chooseDisplay = parseInt(prompt(temp));
+        alert("Tên:" + arrListCustomer[chooseDisplay][0] + "\n" +
+            "CMND:" + arrListCustomer[chooseDisplay][1] + "\n" +
+            "Ngày sinh:" + arrListCustomer[chooseDisplay][2] + "\n" +
+            "Email:" + arrListCustomer[chooseDisplay][3] + "\n" +
+            "Địa chỉ:" + arrListCustomer[chooseDisplay][4] + "\n" +
+            "Loại dịch vụ:" + arrListCustomer[chooseDisplay][5] + "\n" +
+            "Loại phòng:" + arrListCustomer[chooseDisplay][6] + "\n" +
+            "Loại khách hàng:" + arrListCustomer[chooseDisplay][7] + "\n" +
+            "Giảm giá:" + arrListCustomer[chooseDisplay][8] + "\n" +
+            "Số người đi kèm:" + arrListCustomer[chooseDisplay][9] + "\n" +
+            "Ngày lưu trú:" + arrListCustomer[chooseDisplay][10] + "\n");
+        displayMainMenu();
+    }
+    function addNewCustomer() {
+        let cusInfo = [];
+        let ten = prompt('Họ và Tên')
+        let cmnd = prompt('Số CMND');
+        let sinhnhat = prompt('Ngày/Tháng/Năm');
+        let email = prompt('Email');
+        let diachi = prompt('Địa Chỉ');
+        let cus = prompt('Customer');
+        let discount = prompt('Giảm Giá');
+        let soluong = prompt('Số lượng đi kèm');
+        let songay = prompt('Số ngày thuê');
+        let loaidichvu = prompt('Loại dịch vụ');
+        let loaiphong = prompt('Loại phòng thuê');
+        cusInfo.push(ten);
+        cusInfo.push(cmnd);
+        cusInfo.push(sinhnhat);
+        cusInfo.push(email);
+        cusInfo.push(diachi);
+        cusInfo.push(cus);
+        cusInfo.push(discount);
+        cusInfo.push(soluong);
+        cusInfo.push(songay);
+        cusInfo.push(loaidichvu);
+        cusInfo.push(loaiphong);
+        arrListCustomer.push(cusInfo);
+        alert("Bạn đã thêm thành công");
+        displayMainMenu()
+    }
+
+    displayMainMenu();
+</script>
+
+</body>
+</html>
