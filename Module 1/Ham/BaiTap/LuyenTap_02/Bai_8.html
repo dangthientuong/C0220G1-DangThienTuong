@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 8</title>
+</head>
+<body>
+<script>
+    let a = prompt('Nhập vào mảng số nguyên');
+    let array = a.split('');
+    let ketqua = kiemtra(a);
+    function kiemtra(a) {
+        let first = 0;
+        let last = array.length - 1;
+        let temp;
+        while (first < last) {
+            temp = array[first];
+            array[first] = array[last];
+            array[last] = temp;
+            first++;
+            last--;
+        }
+        return array;
+
+    }
+    document.write('Mảng khi nhập ban đầu là : ' +  a + '<br>');
+    document.write('Mảng sau khi đảo là : ' + array);
+</script>
+</body>
+</html>
