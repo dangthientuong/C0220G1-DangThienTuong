@@ -6,25 +6,24 @@
 </head>
 <body>
 <script>
-    let username = prompt("Vui long nhap ten");
-    if (username == "Admin") {
-        alert("Xin chao ");
+    let name = prompt('Nhập vào tên');
+    if (name == 'Admin') {
+        let password = prompt('Nhập mật khẩu');
+        if (password == 'TheMaster') {
+            document.write('Welcome');
+        }
+        else if (password == null) {
+            document.write('Canceled');
+        }
+        else {
+            document.write('Wrong password');
+        }
     }
-    else if (username == null) {
-        alert("Cancel");
+    else if (name == null) {
+        document.write('canceld');
     }
     else {
-        alert("Toi khong biet ban");
-    }
-    let pass = prompt("Vui long nhap mat khau");
-    if (pass == "TheMaster") {
-        alert("Welcome");
-    }
-    else if (pass == null) {
-        alert("Canceled");
-    }
-    else {
-        alert("Wrong password")
+        document.write('I don’t know you');
     }
 </script>
 </body>

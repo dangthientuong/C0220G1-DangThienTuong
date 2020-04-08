@@ -21,7 +21,7 @@
   }
 
   */
-    let noidung = prompt("Nhập vào chuỗi kí tự");
+    /*let noidung = prompt("Nhập vào chuỗi kí tự");
     let array = noidung.split("");
     let chuhoa = noidung.toUpperCase();
     let arraychuhoa = chuhoa.split("");
@@ -37,6 +37,17 @@
         }
     }
     document.write(ketqua.join(''));
+
+     */
+    let a = ["nam" , "nga" , "hien" , "tuan"];
+    function check(a) {
+        for (let i = 0; i < a.length ; i++) {
+            a[i] =  a[i].charAt(0).toLocaleUpperCase() + a[i].slice(1);
+        }
+        return a;
+
+    }
+    document.write(check(a));
 
 </script>
 </body>
